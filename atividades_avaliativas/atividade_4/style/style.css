@@ -21,7 +21,7 @@
     --cor4:#8C4C27;
 }
 header {
-    background-image: linear-gradient(to top, var(--cor2), var(--cor1), transparent);
+    background-color: rgb(206, 205, 205);
     height: 120px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.411)
 }
@@ -33,33 +33,32 @@ header {
     text-align: center;
     display: block;
     padding-top: 30px;
-    color: var(--cor4);
+    color: black;
+    
     
 }
 .men1 {
-    background-color: var(--cor2);
+    background-color: rgb(206, 205, 205);
     padding: 5px;
     
 }
-
-
 nav > a {
     margin: 20px;
     text-decoration: none;
     font-weight: bold;
-    background-color: var(--cor3);
+    background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.363);
     border-radius: 5px;
     padding: 3px;
-    color: var(--cor4);    
+    color: black;    
 }  
 nav > a:hover {
-    background-color: var(--cor4);
-    color: black; 
+    background-color: black;
+    color: white; 
 }
 main {
     min-width: 300px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     margin-bottom: 20px;
     padding: 20px;
@@ -68,3 +67,15 @@ main {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.fotopet {
+    background-image: url(../img/pets_width_900.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: local;
+    /* border: 1px solid black; */
+    height: 300px;
+    width: auto;
+    margin: -19px -19px -0px -19px;
+    padding-bottom: 20px;
+}   
