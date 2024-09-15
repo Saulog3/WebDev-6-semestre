@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Avaliativa 06</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        header h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1em;
+        }
+        main {
+            width: 600px;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            border: 1px solid black;
+            padding: 20px;
+        }
+        .tabn {
+            width: 100%;
+        }
+        #nome, #mail, #obs, .menor {
+            width: 100%;
+        }
+        #obs {
+            padding-bottom: 30px;
+        }
+        .menor {
+            width: calc(50% - 10px);
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h3>
+                Faça seu pedido de pré-reserva e em breve entraremos em contato
+            </h3>
+        </header>
+        <form id="formReserva" action="" method="get">
+            <table class="tabn">
+                <tr>
+                    <td><label for="nome">Nome completo*</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="nome" id="nome"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">E-mail*</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="email" name="mail" id="mail"></td>
+                </tr>
+                <tr>
+                    <td><label for="cpf">CPF*</label></td>
+                    <td><label for="tel">Telefone*</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="menor" name="cpf" id="cpf"></td>
+                    <td><input type="text" class="menor" name="tel" id="tel"></td>
+                </tr>
+                <tr>
+                    <td><label for="data_entrada">Data de entrada*</label></td>
+                    <td><label for="data_saida">Data de saída*</label></td>
+                </tr>
+                <tr>
+                    <td><input type="date" class="menor" name="data_entrada" id="data_entrada"></td>
+                    <td><input type="date" class="menor" name="data_saida" id="data_saida"></td>
+                </tr>
+                <tr>
+                    <td><label for="n_adtos">Nº de Adultos*</label></td>
+                    <td><label for="n_cri">Nº de Crianças*</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="menor" name="n_adtos" id="n_adtos"></td>
+                    <td><input type="text" class="menor" name="n_cri" id="n_cri"></td>
+                </tr>
+                <tr>
+                    <td><label for="cod">Código promocional</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="menor" name="cod" id="cod"></td>
+                </tr>
+                <tr>
+                    <td><label for="obs">Observação</label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" name="obs" id="obs"></td>
+                </tr>
+            </table>
+            <button type="button" id="reservarBtn">Reservar</button>
+            <button type="button" id="limparBtn">Limpar</button>
+        </form>
+    </main>
+
+    <script>
+     
+        const maxReservas = 5; 
+        let reservasAtuais = 0;  
+
+        const reservarBtn = document.getElementById('reservarBtn');
+        const form = document.getElementById('formReserva');
+
+        function fazerReserva() {
+            if (reservasAtuais < maxReservas) 
+            {
+                reservasAtuais++;
+                alert(`Reserva feita com sucesso! Vagas restantes: ${maxReservas - reservasAtuais}`);
+                
+                if (reservasAtuais === maxReservas) {
+                    alert('Não há mais vagas disponíveis.');
+                    reservarBtn.disabled = true;
+                }
+            }
+        }
+
+
+
+        reservarBtn.addEventListener('click', fazerReserva);
+
+        document.getElementById('limparBtn').addEventListener('click', function() {
+            form.reset();
+        });
+
+    </script>
+</body>
+</html>
