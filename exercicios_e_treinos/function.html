@@ -7,13 +7,19 @@
     <script>
         function click_me() {
 
-        var nome = prompt("Qual seu nome?:");
-        var mail = prompt("Qual seu E-mail?:");
-        var cpf = prompt("Qual seu CPF?:");
-        var ddn = prompt("Qual sua data de nascimento?:");
+            var nome = prompt("Qual seu nome?:");
+            var mail = prompt("Qual seu E-mail?:");
+            var cpf = prompt("Qual seu CPF?:");
+            var ddn = prompt("Qual sua data de nascimento?:");
+            
         
-    
-        alert("Nome digitado: " + nome + "\nE-mail digitado: " + mail + "\nCPF digitado: " + cpf + "\nData de Nascimento digitado: " + ddn );
+            // alert("Nome digitado: " + nome + "\nE-mail digitado: " + mail + "\nCPF digitado: " + cpf + "\nData de Nascimento digitado: " + ddn );
+            window.alert(`
+                Nome digitado: ${nome}
+                E-mail digitado: ${mail}
+                CPF digitado: ${cpf}
+                Data de Nascimento digitado: ${ddn}`
+            )
         // alert("Nome digitado: " + nome);
         // alert("E-mail digitado: " + mail);
         // alert("CPF digitado: " + cpf);
