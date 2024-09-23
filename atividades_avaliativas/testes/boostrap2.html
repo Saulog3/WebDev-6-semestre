@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pré-Reserva</title>
+    <!-- Link do CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Faça seu pedido de pré-reserva e em breve entraremos em contato.</h2>
+        
+        <form action="#" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="nome">Nome completo*</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail*</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cpf">CPF*</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone">
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dataEntrada">Data da entrada*</label>
+                    <input type="date" class="form-control" id="dataEntrada" name="dataEntrada" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="dataSaida">Data da saída*</label>
+                    <input type="date" class="form-control" id="dataSaida" name="dataSaida" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="numAdultos">Nº de adultos</label>
+                    <select id="numAdultos" name="numAdultos" class="form-control">
+                        <option value="1">1 adulto</option>
+                        <option value="2">2 adultos</option>
+                        <option value="3">3 adultos</option>
+                        <option value="4">4 adultos</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="numCriancas">Nº de crianças</label>
+                    <select id="numCriancas" name="numCriancas" class="form-control">
+                        <option value="0">0 crianças</option>
+                        <option value="1">1 criança</option>
+                        <option value="2">2 crianças</option>
+                        <option value="3">3 crianças</option>
+                        <option value="4">4 crianças</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="codigoPromocional">Código promocional</label>
+                <input type="text" class="form-control" id="codigoPromocional" name="codigoPromocional">
+            </div>
+            
+            <div class="form-group">
+                <label for="observacao">Observação</label>
+                <textarea id="observacao" name="observacao" class="form-control" rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Reservar</button>
+        </form>
+    </div>
+
+    <!-- Script do Bootstrap e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
