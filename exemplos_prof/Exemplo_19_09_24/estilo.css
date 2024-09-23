@@ -1,0 +1,49 @@
+html, body {
+    height: 100%; /* Faz com que html e body ocupem toda a altura da janela */
+    margin: 0; /* Remove margens padrão */
+}
+
+body {
+    background-image: url('teste.jpg');
+    background-size: cover; /* Isso garante que a imagem cubra todo o fundo */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+button {
+    background-color: #28a745; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block; /* Faz os botões ficarem um abaixo do outro */
+    margin: 10px auto; /* Centraliza os botões */
+    width: 150px; /* Largura fixa para os botões */
+}
+
+button:hover {
+    background-color: #218838; /* Efeito de hover */
+}

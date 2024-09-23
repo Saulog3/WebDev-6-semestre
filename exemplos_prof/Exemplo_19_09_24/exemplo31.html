@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Array com Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            margin: 10px;
+            padding: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coletor de Dados</h1>
+    <input type="text" id="entrada" placeholder="Digite algo" required>
+    <button onclick="adicionarValor()">Adicionar</button>
+    <button onclick="mostrarValores()">Mostrar Valores</button>
+    <div id="resultado"></div>
+
+    <script>
+        var valores = []; // Array para armazenar os valores
+
+        function adicionarValor() {
+            var entrada = document.getElementById('entrada').value; // Coleta o valor do input
+            if (entrada) {
+                valores.push(entrada); // Adiciona o valor ao array
+                document.getElementById('entrada').value = ''; // Limpa o campo de entrada
+                alert('Valor adicionado: ' + entrada);
+            } else {
+                alert('Por favor, preencha o campo.');
+            }
+        }
+
+        function mostrarValores() {
+            if (valores.length === 0) {
+                document.getElementById('resultado').innerText = 'Nenhum valor adicionado.';
+            } else {
+                document.getElementById('resultado').innerText = 'Valores: ' + valores.join(', ');
+            }
+        }
+    </script>
+</body>
+</html>

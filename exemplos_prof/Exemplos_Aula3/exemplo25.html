@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+    <script>
+        function verificarDiaDaSemana() {
+            var dia = prompt("Digite o dia da semana (ex: segunda, terça, etc.):").toLowerCase();
+
+            switch (dia) {
+                case "segunda":
+                    alert("Hoje é segunda-feira! Início da semana.");
+                    break;
+                case "terça":
+                    alert("Hoje é terça-feira! Continuamos a semana.");
+                    break;
+                case "quarta":
+                    alert("Hoje é quarta-feira! Metade da semana.");
+                    break;
+                case "quinta":
+                    alert("Hoje é quinta-feira! Quase lá!");
+                    break;
+                case "sexta":
+                    alert("Hoje é sexta-feira! O fim de semana está chegando.");
+                    break;
+                case "sábado":
+                    alert("Hoje é sábado! Aproveite o fim de semana.");
+                    break;
+                case "domingo":
+                    alert("Hoje é domingo! Dia de descanso.");
+                    break;
+                default:
+                    alert("Dia inválido! Por favor, insira um dia válido da semana.");
+                    break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo ao Verificador de Dia da Semana!</h1>
+    <button onclick="verificarDiaDaSemana()">Digite o dia da semana</button>
+</body>
+</html>

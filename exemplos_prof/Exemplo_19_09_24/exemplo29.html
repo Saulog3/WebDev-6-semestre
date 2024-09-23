@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Frutas</title>
+</head>
+<body>
+    <h1>Lista de Frutas</h1>
+    <button onclick="mostrarFrutas()">Mostrar Frutas</button>
+    <button onclick="adicionarFruta()">Adicionar Fruta</button>
+    <div id="resultado"></div>
+
+    <script>
+        var frutas = ['Maçã', 'Banana', 'Laranja', 'Manga', 'Uva', 'Abacaxi']; // Lista inicial de frutas
+
+        function mostrarFrutas() {
+            var resultado = ''; // Inicializa uma string vazia
+            for (var i = 0; i < frutas.length; i++) {
+                resultado += frutas[i] + '<br>'; // Adiciona cada fruta à string
+            }
+            document.getElementById('resultado').innerHTML = resultado; // Mostra a lista no HTML
+        }
+
+        function adicionarFruta() {
+            var frutaParaAdicionar = prompt('Digite o nome da fruta que deseja adicionar:'); // Pergunta qual fruta adicionar
+            if (frutaParaAdicionar) {
+                frutas.push(frutaParaAdicionar); // Adiciona a fruta ao array
+                mostrarFrutas(); // Mostra a lista atualizada
+            } else {
+                alert('Por favor, digite o nome de uma fruta.');
+            }
+        }
+
+        // Mostrar a lista de frutas inicialmente
+        mostrarFrutas();
+    </script>
+</body>
+</html>

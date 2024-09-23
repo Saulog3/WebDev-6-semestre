@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Estrutura For</title>
+    <script>
+        function executarFor() {
+            var contador;
+            for (contador = 0; contador < 10; contador++) {
+                alert(contador);
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code {
+            background-color: #2d2d2d;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: yellow;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Exemplo da Estrutura <code>for</code></h1>
+    <div class="code">
+        <span class="highlight">var</span> contador;<br>
+        <span class="highlight">for</span>(contador = 0; contador &lt; 10; contador++) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;alert(contador);<br>
+        }
+    </div>
+    <p>No exemplo, uma <strong>variável contador</strong> é inicializada com o <strong>valor zero</strong>, e enquanto for <strong>menor que 10</strong>, o laço <code>for</code> deve ser executado.</p>
+    <button onclick="executarFor()">Executar Código</button>
+</div>
+
+</body>
+</html>

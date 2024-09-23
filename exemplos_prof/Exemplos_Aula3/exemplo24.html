@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coletar Informações</title>
+    <script>
+        function coletarInformacoes() {
+            var nome = prompt("Por favor, insira seu nome:");
+            var idade = prompt("Por favor, insira sua idade:");
+            var telefone = prompt("Por favor, insira seu telefone:");
+            
+            if (idade >= 18) {
+                alert("Você é maior de idade.");
+                alert("Nome: " + nome + "\nIdade: " + idade + "\nTelefone: " + telefone);
+            } else {
+                alert("Você é menor de idade e não pode acessar o conteúdo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Bem-vindo!</h1>
+    <button onclick="coletarInformacoes()">Digite suas informações</button>
+</body>
+</html>
