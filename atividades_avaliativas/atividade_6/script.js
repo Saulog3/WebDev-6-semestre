@@ -17,4 +17,5 @@ function CalcularBTUs() {
 function resetarCampos() {
     document.getElementById('area').value = ''; // Limpa o campo de nome
     document.getElementById('pessoas').value = ''; // Limpa o campo de altura
+
 }
